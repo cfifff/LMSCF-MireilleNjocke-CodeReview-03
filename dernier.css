@@ -1,0 +1,292 @@
+body {
+box-sizing: border-box;
+	border: 2px solid green;
+	width: 90%; 
+    margin-left:auto; 
+    margin-right: auto; 
+    min-height:100%;
+    height:100%;
+}
+header {
+	background-color: #ffebee;
+	height: 150px;
+}
+nav {
+	display: flex;
+	align-items: left;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	background-color:  #A52A2A;
+	padding-top: 20px;
+	list-style: none;
+	padding-left: 16px;
+}
+a {
+	color: white;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 22px;
+	margin: 10px;
+	}
+.containerbox {
+	width: 100%;
+	position: relative;
+
+}
+.container {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+
+
+}
+.column1 {
+	background: rgba(255,255,255,.7);
+ 	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	width: 500px;
+	height: auto;
+	display: block;
+	
+	/*box-sizing: border-box;*/
+	margin: 50px;
+	
+	padding: 70px;
+	padding-top: 20px;
+	text-align: center;
+	}
+.column1 li {
+	line-height: 1.5;
+	padding: 0.5 em 0;
+	list-style-image: url('icons.png');
+}
+.column2 li {
+	line-height: 1.5;
+	padding: 0.5 em 0;
+	list-style-image: url('icons.png');
+}
+
+.column2 {
+	background: rgba(255,255,255,.7);
+ 	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	width: 500px;
+	height: auto;
+	display: block;
+	/*box-sizing: border-box;*/
+	margin: 50px;
+
+	/*border: 4px solid black;*/
+	padding: 70px;
+	padding-top: 20px;
+	text-align: center;
+}
+.column {
+	width: 100%;
+	height: auto;
+	background-image: url("traffic.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: black;	
+}
+
+/*.overlay {
+	position: relative;
+  bottom: 40px;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  background-color: lightgrey;
+  color: black;
+  font-size: 20px;
+  padding: 0.3px;
+  text-align: center
+  
+}*/
+.form, h4 {
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 30px;
+	color: black;
+}
+.form, p {
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 20px;
+	color: black;
+}
+.form {
+	/*background:rgb(0, 0, 0);
+    background:rgba(0, 0, 0, 0.4);
+    background:transparent\9;*/
+    
+
+ 	background: rgba(255,255,255,.7);
+ 	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	width: 50%;
+	height: 70%;
+	display: inline-block;
+	/*box-sizing: border-box;*/
+	margin: 300px;
+	/*border: 4px solid black;*/
+	padding: 20px;
+	padding-bottom: 2px;
+	text-align: center;		
+}
+.overlay {
+	position: relative;
+  bottom: 230px;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  background-color: lightgrey;
+  color: black;
+  font-size: 20px;
+  padding: 0.3px;
+  text-align: center;
+  z-index: 2;
+  
+}
+
+.overlay1 {
+	position: relative;
+	top: 100px;
+	z-index: 7;
+}
+.overlay2 {
+	position: relative;
+	top: 100px;
+	left: 30px;
+	font-size: 40px;
+	font-family: sans-serif;
+	color: white;
+}
+
+/*.overlay1 {
+  position: relative; 
+  display: flex; 
+  float: left;
+  width: 60%; 
+  height: 60%; 
+  top: 0;
+  left: 6%;
+  right: 0;
+  bottom: 50;
+  background-color: rgba(0,0,0,0.5); /* transparent background with opacity */
+  
+/*}*/
+.row {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	text-align: center;
+	margin: 4px;
+	align-items: center;
+
+}
+.wrap {
+	position: relative;
+	bottom: 200px;
+	display: flex;
+	width: 80%;
+	height: auto;;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px;
+	box-sizing: border-box;
+	border: 2px solid blue;
+	padding: 1px;
+
+}
+
+#CalculateButton {
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+	font-size: 30px;
+	color: white;
+	background-color: #004A7F;
+	border: none;
+	font-family: Arial;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+  	background: green;
+  	padding: 2px 4px;
+  	animation: glowing 1500ms infinite;	 
+}
+#banner {
+	display: flex;
+	float: right;
+	padding-top: 20px;
+}
+#logo {
+	font-size: 3px;
+	padding-top: 28px;
+}
+#logo1 {
+	display: flex;
+	float: right;
+}
+
+#Yourname {
+	padding-bottom: 10px;
+	width: 200px;
+}
+#Age {
+	padding-bottom: 10px;
+	width: 200px;
+}
+#Country {
+	padding-bottom: 10px;
+	width: 200px;
+}
+#Horsepowerofcar {
+	padding-bottom: 10px;
+	width: 200px;
+}
+.column3 {
+	padding: 1px;
+}
+select {
+	width: 200px;
+	padding-bottom: 10px;
+
+}
+
+footer {
+	background-color: black;
+	height: 150px;
+}
+
+footer p {
+	color: white;
+	font-size: 15px;
+	font-family: Arial;
+	text-align: center;;
+	padding-top: 70px;
+}
+
+.box {
+	background-color: black;
+	display: flex;
+	align-items: left;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

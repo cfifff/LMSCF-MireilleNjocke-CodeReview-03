@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="dernier.css">
+</head>
+<body>
+	<header>
+	
+	<img id="logo" src="logo.png" alt="logo" width="300px" height="auto">
+	<img id="banner" src="banner.png" alt="banner" width="700px" height="100px">
+	</header>
+	<section>
+		<nav>
+			<li><a href="" title="home">Home</a></li>
+			<li><a href="" title="team">Team</a></li>
+		</nav>
+
+<div class="containerbox">
+				<div class="column">
+							<p class="overlay2">Car insurance</p>
+
+
+
+					
+														<div class="wrapper">
+
+	<div class="overlay1">
+					<div class="form">
+		<h4>Great Coverage begins<br>with a custom quote</h4>
+			<div class="row">
+							<div class="column3">
+		<p>Your name:</p>
+		<p><input type="text" name="Yourname" id="Yourname"></p>
+							</div>
+							<div class="column4">
+		<p>Age</p>
+		<p><input type="number" name="Age" id="Age"></p>
+							</div>
+							
+			</div>
+							
+			<div class="row">
+							
+							<div class="column5">
+		<p>Country</p>
+		<select id="selectCountry">
+		<option value="Austria">Austria</option>
+		<option value="Hungary">Hungary</option>
+		<option value="Greece">Greece</option>
+		</select>
+							</div>
+			
+		
+							
+							<div class="column6">
+		<p>Horsepower of car</p>
+		<p><input type="number" name="Horsepowerofcar" id="Horsepowerofcar"></p>
+							</div>		
+			</div>
+				<div class="animation">
+					<input type="button" name="Calculate" id="CalculateButton" value="Calculate"> 
+				</div>
+
+				<p id="outputarea"></p>
+					</div>
+	</div>
+					<div class="overlay">
+				<h3>Un-complicating car coverage</h3>
+				<p>Understanding your coverage options shouldn't be so hard.<br>We'll guide you through available coverage types,<br>starting with who and what is covered.</p>
+			</div>
+																		</div>
+	
+</div>
+
+<div class="container">
+	
+			<div class="wrap">
+		<div class="column1">
+			<h4>what comes standard</h4>
+			<p>the coverage you need</p>
+			<li>Bodily Injury Liability</li>
+			<li>Property Damage</li>
+			<li>Medical Payments</li>
+			<p><b>Benefits</b></p>
+			<p>12-month rate guarantee| 24/7 customer<br>service| Lifetime Repair Guarantee</p>
+		</div>
+		<div class="column2">
+			<h4><span>Add-on protection & coverage</span></h4>
+			<h6>For more peace of mind</h6>
+			<li>Better Car Replacement</li>
+			<li>Towing & Labor</li>
+			<li> Rental Car Coverage</li>
+			<p><b>Earned Benefits</b></p>
+			<p>Accidental Forgiveness | New Car<br>Replacement</p>
+			</div>
+		</div>
+		
+
+</div>
+	</section>
+<footer>
+	<div class="box">
+	
+			<li><a href="" title="home">Home</a></li>
+			<li><a href="" title="team">Team</a></li>
+	
+</div>
+	<img id="logo1" src="logo-inv.png" alt="logo" width="300px" height="auto">
+	<p>Mireille Njocke codefactory 2020</p>
+</footer>
+
+<script>
+		
+		document.getElementById('CalculateButton').addEventListener('click', function() {
+			let result = 0;
+			let selectCountry = document.getElementById("selectCountry").value;
+			let inputName = document.getElementById('Yourname').value;
+			let option1 = parseInt(document.getElementById('Horsepowerofcar').value);
+			let option2 = parseInt(document.getElementById('Age').value);
+			/*let option3 = parseInt(document.getElementById('country').value);*/
+			/*let total = document.getElementById("CalculateButton");*/
+
+			if (selectCountry =='Austria') {
+				result = option1 * 100 / option2 + 100;
+			}
+
+			if (selectCountry == 'Hungary') {
+				result = option1 * 120 / option2 + 50;
+			}
+
+			if (selectCountry == 'Greece') {
+				result = option1 * 150 / (option2 + 3) + 150;
+			}
+			document.getElementById('outputarea').innerHTML = 'Hi ' + inputName + ' your insurance payments will be ' + result.toFixed(2);
+/*
+			let pays1Pays = new PaysConstructor(pays1, option1 * 100, option2);
+			let pays2Pays = new PaysConstructor(pays2, option1 * 120, option2);
+			let pays3Pays = new PaysConstructor(pays3, option1 * 150, option2 + 2);
+*/
+		})
+/*
+			function PaysConstructor(Age, Horsepowerofcar, Country) {
+				this.option2 = Age;
+				this.option1 = Horsepowerofcar;
+				this.selectCountry = Country;
+
+				this.av1 = Horsepowerofcar * 100 /Age + 100;
+				this.av2 = Horsepowerofcar * 120 / Age + 50;
+				this.Av3 = Horsepowerofcar * 100 / Age  + 50;
+				
+				this.Total1 = this.Country[this.Av1 * this.Country.length];
+				this.Total2 = this.Country[this.Av2 * this.Country.length];
+				this.Total3 = this.Country[this.Av3 * this.Country.length];
+				this.countries = [pays1Pays, pays2Pays, pays3Pays];
+
+
+
+
+				this.calc = function() {
+
+					if (this.Total1.className === "hide") {
+						console.log(this.av1)
+					}
+					else this.Total1.className = "hide";
+
+						
+					}
+					if(this.Total2.className === "hide") {
+						consolog.log(this.Av2)
+					}
+					else this.Total2.className === "hide"
+
+					if (this.Total3.className === "hide") {
+						console.log(thisAv3)
+					}
+					else this.Total3.className === "hide"
+
+					this.pay1.addEventListener("onselect", calc());
+					this.pay2.addEventListener("onselect", calc());
+					this.pay3.addEventListener("onselect", calc());
+					document.getElementById('outputarea').innerHTML = countries.calc();
+
+							
+				}
+			*/
+		
+	</script>
+	
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
