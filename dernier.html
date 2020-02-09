@@ -27,45 +27,56 @@
 					
 														<div class="wrapper">
 
-	<div class="overlay1">
-					<div class="form">
-		<h4>Great Coverage begins<br>with a custom quote</h4>
-			<div class="row">
-							<div class="column3">
-		<p>Your name:</p>
-		<p><input type="text" name="Yourname" id="Yourname"></p>
-							</div>
-							<div class="column4">
-		<p>Age</p>
-		<p><input type="number" name="Age" id="Age"></p>
-							</div>
+															<div class="overlay1">
+																<div class="form">
+																		<h4>Great Coverage begins<br>with a custom quote</h4>
+																	<div class="row">
+																		<div class="column3">
+																			<p>Your name:</p>
+																			<p><input type="text" name="Yourname" id="Yourname"></p>
+																		</div>
+																		<div class="column4">
+																				<p>Age</p>
+																				<p><input type="number" name="Age" id="Age"></p>
+																		</div>
 							
-			</div>
+																	</div>
 							
-			<div class="row">
+																	<div class="row">
 							
-							<div class="column5">
-		<p>Country</p>
-		<select id="selectCountry">
-		<option value="Austria">Austria</option>
-		<option value="Hungary">Hungary</option>
-		<option value="Greece">Greece</option>
-		</select>
-							</div>
+																		<div class="column5">
+																				<p>Country</p>
+																				<select id="selectCountry">
+																				<option value="Austria">Austria</option>
+																				<option value="Hungary">Hungary</option>
+																				<option value="Greece">Greece</option>
+																				</select>
+																		</div>
 			
 		
 							
-							<div class="column6">
-		<p>Horsepower of car</p>
-		<p><input type="number" name="Horsepowerofcar" id="Horsepowerofcar"></p>
-							</div>		
-			</div>
-				<div class="animation">
-					<input type="button" name="Calculate" id="CalculateButton" value="Calculate"> 
-				</div>
-
-				<p id="outputarea"></p>
-					</div>
+																		<div class="column6">
+																				<p>Horsepower of car</p>
+																				<p><input type="number" name="Horsepowerofcar" id="Horsepowerofcar"></p>
+																		</div>		
+																	</div>
+																	<div class="center">
+      																		<input type="checkbox" id="CalculateButton">
+      																		<label for="CalculateButton" class="click-me">Calculate</label>
+																		<div class="pop">
+																			<div class="header">
+          																		<h2>Your Insurance Quote</h2>
+          																		<label for="click" class="fas fa-times"></label>
+        																	</div>
+        																		<label for="click" class="fas fa-check"></label>
+        																		<p id="outputarea"></p>
+        																		<div class="line"></div>
+        																		<label for="CalculateButton" class="close-btn">Close</label>
+      																	</div>
+      																</div>			
+													    </div> 
+																		
+														</div>
 	</div>
 					<div class="overlay">
 				<h3>Un-complicating car coverage</h3>
@@ -134,7 +145,7 @@
 			if (selectCountry == 'Greece') {
 				result = option1 * 150 / (option2 + 3) + 150;
 			}
-			document.getElementById('outputarea').innerHTML = 'Hi ' + inputName + ' your insurance payments will be ' + result.toFixed(2);
+			document.getElementById('outputarea').innerHTML = 'Hi ' + inputName + ' your insurance payments will be € ' + result.toFixed(2);
 /*
 			let pays1Pays = new PaysConstructor(pays1, option1 * 100, option2);
 			let pays2Pays = new PaysConstructor(pays2, option1 * 120, option2);
